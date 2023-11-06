@@ -1,0 +1,28 @@
+<div class="container">
+    <table class="table table-bordered table-inverse">
+        <tr>
+            <th> Name</th>
+            <th>Email</th>
+            <th>Model</th>
+            <th class="text-right">Price</th>
+            <th>Date</th>
+        </tr>
+        <tr *ngFor="let bike of bikes">
+            <td>
+                <a [routerLink]="['/admin/view/',bike.id]">{{bike.name}}</a>
+            </td>
+            <td>
+                {{bike.email}}
+            </td>
+            <td>
+                {{bike.model}}
+            </td>
+            <td class="text-right">
+                {{bike.purchaseRate}}
+            </td>
+            <td>
+                {{bike.purchaseDate}}
+            </td>
+        </tr>
+    </table>
+</div>
